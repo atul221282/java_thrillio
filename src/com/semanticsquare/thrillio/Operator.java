@@ -1,5 +1,7 @@
 package com.semanticsquare.thrillio;
 
+import com.semanticsquare.thrillio.entities.Book;
+
 public class Operator {
 
 	public static void main(String[] args) {
@@ -31,9 +33,12 @@ public class Operator {
 		double dMod = 1 % 2;
 		System.out.println("1%2 when assigned to double variable = " + dMod);
 
+		Book s2 = null;
+		Book val = s2 == null ? new Book("") : s2;
+
 		String month = "";
 		switch (month) {
-		case "January":{
+		case "January": {
 			break;
 		}
 		default:
