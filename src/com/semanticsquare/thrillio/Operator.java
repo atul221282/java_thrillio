@@ -24,6 +24,7 @@ public class Operator {
 		System.out.println("1/2 when assigned to double variable = " + d);
 
 		double dMod = 1 % 2;
+		
 		System.out.println("1%2 when assigned to double variable = " + dMod);
 	}
 
