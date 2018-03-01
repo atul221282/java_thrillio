@@ -4,10 +4,11 @@ public class Operator {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		//coumpoundOperator();
+		// coumpoundOperator();
 		OperatorBasicsDemo.process();
 	}
 
+	@SuppressWarnings("unused")
 	private static void coumpoundOperator() {
 		int x = 10;
 		System.out.println("Before compund operator:- " + x);
@@ -29,6 +30,15 @@ public class Operator {
 
 		double dMod = 1 % 2;
 		System.out.println("1%2 when assigned to double variable = " + dMod);
+
+		String month = "";
+		switch (month) {
+		case "January":{
+			break;
+		}
+		default:
+			break;
+		}
 	}
 
 }
