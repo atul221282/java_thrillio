@@ -1,13 +1,22 @@
 package com.semanticsquare.thrillio;
 
 import com.semanticsquare.thrillio.entities.Book;
-
+import java.lang.*;
 public class Operator {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		// coumpoundOperator();
-		OperatorBasicsDemo.process();
+		// OperatorBasicsDemo.process();
+		// quizClass();
+		String s = "k";
+		int x = 5;
+		System.out.println(x += 2);
+	}
+
+	private static void quizClass() {
+		System.out.println(8 >>> 3);
+		System.out.println(9 * 5 - 'a' / 5.0);
 	}
 
 	@SuppressWarnings("unused")

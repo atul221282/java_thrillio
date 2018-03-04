@@ -9,6 +9,13 @@ public class User {
 	private int gender;
 	private String userType;
 
+	public User() {
+	}
+
+	public User(int id) {
+		this.id = id;
+	}
+
 	public User(long id, String email, String firstName, int gender, String lastName, String password,
 			String userType) {
 		// TODO Auto-generated constructor stub
@@ -127,5 +134,17 @@ public class User {
 
 	public String getUserDetails() {
 		return "Email: " + this.email + ", Name: " + this.firstName + " " + this.lastName;
+	}
+
+	public void printUserType() {
+		System.out.println("This is User type");
+	}
+
+	public void postAReview() {
+		System.out.println("This is user review");
+	}
+
+	public static void staticA() {
+		System.out.println("User Static A");
 	}
 }
