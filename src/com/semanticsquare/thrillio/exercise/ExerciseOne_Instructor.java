@@ -1,5 +1,9 @@
 package com.semanticsquare.thrillio.exercise;
 
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+
 import com.semanticsquare.thrillio.entities.Book;
 import com.semanticsquare.thrillio.entities.BookType;
 import com.semanticsquare.thrillio.entities.DayEnum;
@@ -17,7 +21,7 @@ public class ExerciseOne_Instructor {
 		// bookExercise();
 	}
 
-	private static void bookExercise() {
+	private static void bookExercise() throws Exception {
 		Book book1 = new Book("Java for Beginners");
 		Book book2 = new Book("Scala for Beginners");
 		Book book3 = new Book("Effective Python");
@@ -40,5 +44,12 @@ public class ExerciseOne_Instructor {
 		System.out.println("/n Day is: " + Day);
 		Day = DayEnum.values()[1000]; // run time error
 		System.out.println("/n Corrupted Enum" + Day);
+		TryStatement();
+	}
+
+	private static void TryStatement() throws FileNotFoundException, IOException {
+		try (FileInputStream in = new FileInputStream("")) {
+
+		}
 	}
 }
