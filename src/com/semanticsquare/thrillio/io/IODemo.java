@@ -8,8 +8,8 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 
 public class IODemo {
-	static String inFileStr = "walden.jpg";
-	static String outFileStr = "walden-out.jpg";
+	static String inFileStr = "src\\walden.JPG";
+	static String outFileStr = "src\\walden-out.JPG";
 
 	public static void fileCopyNoBuffer() {
 		System.out.println("\nInside fileCopyNoBuffer ...");
@@ -19,7 +19,7 @@ public class IODemo {
 		// Print file length
 		File fileIn = new File(inFileStr);
 		System.out.println("File size is " + fileIn.length() + " bytes");
-
+		System.out.println(fileIn.getPath());
 		try (FileInputStream in = new FileInputStream(inFileStr);
 				FileOutputStream out = new FileOutputStream(outFileStr)) {
 			startTime = System.nanoTime();
@@ -40,7 +40,8 @@ public class IODemo {
 	// Most common way to read byte streams from a file
 	public static void fileCopyWithBufferAndArray() {
 		System.out.println("\nInside fileCopyWithBufferAndArray ...");
-
+		File fileIn = new File(inFileStr);
+		System.out.println(fileIn.getAbsolutePath());
 		long startTime, elapsedTime; // for speed benchmarking
 		startTime = System.nanoTime();
 		try (BufferedInputStream in = new BufferedInputStream(new FileInputStream(inFileStr));
