@@ -19,7 +19,7 @@ public class Store1<T extends User> {
 	}
 
 	public <TUser extends User> TUser getUser(TUser data) {
-		// TODO: some mode to data
+		// TODO : Use Func<T> style to implement strategy pattern
 		Class<? extends User> users = data.getClass();
 		try {
 			Method setName = users.getMethod("setName", String.class);
