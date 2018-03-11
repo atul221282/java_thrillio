@@ -1,0 +1,7 @@
+in Generic Bounds can be only as follow
+
+public class Test<T extneds class, interface, interface>{}
+
+public class Test<T extneds interface1, interface2, interface3>{}
+
+public class Test<T extneds enum>{}

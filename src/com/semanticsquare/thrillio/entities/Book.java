@@ -88,4 +88,9 @@ public class Book extends Bookmark {
 	public void setAmazonRating(double amazonRating) {
 		this.amazonRating = amazonRating;
 	}
+
+	@Override
+	public String toString() {
+		return this.getTitle();
+	}
 }

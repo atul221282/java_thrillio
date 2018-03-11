@@ -1,11 +1,11 @@
 package com.semanticsquare.thrillio.collection;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
-import java.util.Optional;
 import java.util.stream.Collectors;
 
 public class Demo2 {
@@ -42,7 +42,15 @@ public class Demo2 {
 	}
 
 	public static void arrayListDemo() {
+		List<Integer> nullList = Arrays.asList(new Integer[3]);
+		System.out.println("Null List is : " + nullList);
+		List<Integer> asStringList = Arrays.asList(1, 2, 3);
+		List<Integer> asStringList2 = Arrays.asList(1, 2, 3, 4);
+
+		System.out.println("Is asStringList equals to asStringList2 : " + asStringList.equals(asStringList2));
+
 		List<Integer> list = new ArrayList<>();
+		// list = Arrays.asList(11, 12, 13);
 		int i = 1;
 		list.add(i++);
 		list.add(i++);
@@ -64,11 +72,13 @@ public class Demo2 {
 		Map<String, String> hash = new HashMap<String, String>() {
 			{
 				put("a", "aaa");
-				put("a", "aaa");
+				put("c", "aaa");
 				put("a", "aaza");
 				put("b", "aaa");
 			}
 		};
+
+		System.out.println(hash.values());
 
 		System.out.println("Hash" + hash);
 
