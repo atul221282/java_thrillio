@@ -6,6 +6,7 @@ import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
+import java.util.Map.Entry;
 import java.util.stream.Collectors;
 
 public class Demo2 {
@@ -116,6 +117,16 @@ public class Demo2 {
 		System.out.println(list4);
 		System.out.println(list);
 
+		String ss = list.parallelStream().map((x) -> x.toString()).collect(Collectors.joining(","));
+
+		System.out.println("Used joining: " + ss);
+
+		Map<Integer, List<String>> map = list.parallelStream().map((x) -> x.toString())
+				.collect(Collectors.groupingBy(Integer::new));
+		
+		for (Entry<Integer, List<String>> integer : map.entrySet()) {
+			System.out.println(integer.getKey() + integer.getValue().toString());
+		}
 	}
 
 }
