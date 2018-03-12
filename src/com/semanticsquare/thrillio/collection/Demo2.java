@@ -100,7 +100,7 @@ public class Demo2 {
 
 		List<Integer> list3 = list.stream().filter(x -> x % 2 == 0).collect(Collectors.toList());
 		System.out.println("Before filteration : " + list3);
-		list3 = list3.stream().map(x -> new Integer(x + 1)).collect(Collectors.toList());
+		list3 = list3.parallelStream().map(x -> new Integer(x + 1)).collect(Collectors.toList());
 		System.out.println("After filteration : " + list3);
 		list3.set(0, 8);
 		// System.out.println(list3);
